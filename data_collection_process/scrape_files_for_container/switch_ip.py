@@ -1,6 +1,5 @@
 import mybrowser
 import time
-import sys
 import requests
 from datetime import datetime 
 
