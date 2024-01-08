@@ -5,6 +5,8 @@ Project in the course ID2223 at KTH.
 This project aims at geolocalise images in Stockholm.  
 It is divided into two parts.
 
+You can find one of the results of it [here](https://huggingface.co/spaces/AdrianHR/geolocalisation_retrieval_stockholm)
+
 The first part collects images from google street view.  
 It does so using the timemachine and can therefore get  
 images that were taken at the same location but years  
@@ -18,6 +20,7 @@ different time of year and so on, or from a similar,
 maybe close by place.
 
 ### I dont have time to finish the description completely but everything will be finished by the time I present.
+I have finished all the code
 
 ## Directory tree
 ``` bash
@@ -26,6 +29,12 @@ maybe close by place.
 ├── Feature-Pipeline.ipynb                              -- Create features from the images and save them in a feature store
 ├── Training_Pipeline.ipynb                             -- train models, special datagenerator and save them on drive
 ├── Inference_Pipeline.ipynb                            -- logic to 
+├── hf-space-geolocalisation_retrieval_stockholm
+│   ├── app.py
+│   ├── requirements.txt
+│   ├── utils.py
+│   ├── README.md
+│   └── last_nns.png
 ├── data                                                
 │   └── images                                          --
 │       ├── Cropped_Test_v1_buffer_75
