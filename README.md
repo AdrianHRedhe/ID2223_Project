@@ -194,7 +194,13 @@ I have left two options. Either i) use the precomputed embeddings, or ii) downlo
 and recompute the embeddings for the query. To be able to do ii) you have to use your own huggingface account  
 and upload the models from gdrive, to there. Or use mine.
 
-Again, the demo is available on this link: https://huggingface.co/spaces/AdrianHR/Geolocalization_Stockholm_Demo
+Again, the demo is available on this link: https://huggingface.co/spaces/AdrianHR/Geolocalization_Stockholm_Demo  
+and it looks something like this, where the leftmost image is the query, and the others are the 5 first retrieved  
+images.
+
+<p float="left">
+    <img src="readme_images/gradio-example image.png" width="700" />
+</p>
 
 ### Data-collection
 The data collection is split into four steps the first three are quite simple, and you just need to clone the  
