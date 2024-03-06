@@ -1,10 +1,25 @@
-# ID2223_Project
-Project in the course ID2223 at KTH.
+# Geolocalization project: Stockholm
+This project creates a small ml-system from data-collection, pre-processing and training to evaluation.  
+There is a demo available [here](https://huggingface.co/spaces/AdrianHR/Geolocalization_Stockholm_Demo) on huggingfaces.
+
+The data-collection included the scraping of almost 100 000 street view images in Stockholm.
 
 ## Overview
 This project aims at geolocalising images in Stockholm. It is divided into two parts. Data collection of street view  
-images; and the subsequent fine-tuning of a resnet50 retrieval model. You can find one of the results of the  
-project on this gradio [here](https://huggingface.co/spaces/AdrianHR/geolocalisation_retrieval_stockholm) where you can also play around with the models and dataset.
+images; and the subsequent fine-tuning of several resnet50 retrieval models and finally a CLIP model. 
+
+The design of the ML-System architecture is like this diagram here:
+
+<p float="left">
+    <img src="readme_images/ml-system-architecture.png" width="600" />
+</p>
+
+As for a visual intuition of how the data-collection process works. Please look at this diagram:  
+More clarification below.
+
+<p float="left">
+    <img src="readme_images/data-collection-pipeline.png" width="600" />
+</p>
 
 The first part collects images from google street view. It does so using the timemachine and can therefore get  
 images that were taken at the same location but years apart. It also collects images in this manner in all four  
@@ -25,11 +40,11 @@ before we search for them and they are also not seen by the CNN model.
 
 ## Table of Contents
 1. [File structure](#file-structure)
-2. [How to run](#how-to-run)
-    a. [Model-building](#model-building)
-    b. [gradio-demo](#gradio-demo)
-    b. [data-collection](#data-collection)
-3. [Ending Note](#ending-note)
+2. [How to run](#how-to-run)  
+    a. [Model-building](#model-building)  
+    b. [gradio-demo](#gradio-demo)  
+    c. [data-collection](#data-collection)  
+3. [Ending Note](#ending-note)  
 
 ## File structure
 ``` bash
@@ -178,6 +193,8 @@ I have also added a plotly mapbox graph to show the locations of the images. Reg
 I have left two options. Either i) use the precomputed embeddings, or ii) download the model from huggingface  
 and recompute the embeddings for the query. To be able to do ii) you have to use your own huggingface account  
 and upload the models from gdrive, to there. Or use mine.
+
+Again, the demo is available on this link: https://huggingface.co/spaces/AdrianHR/Geolocalization_Stockholm_Demo
 
 ### Data-collection
 The data collection is split into four steps the first three are quite simple, and you just need to clone the  
